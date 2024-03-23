@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Rotem Ris
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Making a canvas that has different elements drawn on it when a button is clicked
  
 Known Issues:
 blah, blah, blah, blah
@@ -55,6 +55,11 @@ function draw_image() {
 	var img = document.getElementById("starrynight");
 	ctx.drawImage(img, 200, 200, 100, 100);
 	} //Places a picture of Starry Night on the canvas when called by the onclick function//
+function clear_canvas(){
+	var c = document.getElementById("myCanvas")
+	var ctx = c.getContext("2d");
+	ctx.clearRect("myCanvas")
+	} //Clears the canvas when the function is called by the onclick function//
 </script>
 
 
@@ -97,7 +102,9 @@ function draw_image() {
 	
 	<button class="w3-btn w3-black" onclick="draw_image()">Add image</button> <!--Calls the function to add an image on the canvas when clicked-->
 
-<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="0" height="0"> <!--Loads the image on the page-->
+	<button class="w3-btn w3-black" onclick="clear_canvas()">Clear canvas</button> <!--Calls the function to clear the canvas when the button is clicked-->
+	
+		<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="0" height="0"> <!--Loads the image on the page-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
