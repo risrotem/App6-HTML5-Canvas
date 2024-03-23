@@ -43,10 +43,10 @@ function draw_b() {
 	var b_context = b_canvas.getContext("2d");
 	b_context.fillRect(50, 25, 150, 100);
 } //Draws a 2D rectangle on the canvas when it is called by the onclick function//
-function draw_c() {
-	var c = document.getElementById("myCanvas);
+function draw_name() {
+	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
-	ctx.font = "50 px Courier New";
+	ctx.font = "50px Courier New";
 	ctx.fillText("Rotem", 10, 50);
 } //Writes my name on the canvas when the function is called by the onclick function//
 </script>
@@ -83,9 +83,10 @@ function draw_c() {
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	<canvas id="myCanvas" width="500" height="400" style="border:1px solid #33C7FF;"></canvas> <!--Adds a rectangular canvas with a light blue solid border-->
+	<canvas id="myCanvas" width="600" height="400" style="border:1px solid #33C7FF;"></canvas> <!--Adds a rectangular canvas with a light blue solid border-->
 	<button class="w3-btn w3-black" onclick="draw_b()">Draw a rectangle</button> <!--Calls the function to draw a rectangle on the canvas when clicked-->
-	<button class="w3-btn w3-black" onclick="draw_c()">Write my name</button> <!--Calls the function to write my name on the canvas when the button is clicked-->
+	<button class="w3-btn w3-black" onclick="draw_name()">Write my name</button> <!--Calls the function to write my name on the canvas when the button is clicked-->
+
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
