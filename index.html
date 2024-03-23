@@ -56,9 +56,7 @@ function draw_image() {
 	ctx.drawImage(img, 200, 200, 100, 100);
 	} //Places a picture of Starry Night on the canvas when called by the onclick function//
 function clear_canvas(){
-	var c = document.getElementById("myCanvas")
-	var ctx = c.getContext("2d");
-	ctx.clearRect("myCanvas")
+	ctx.clearRect(0,0, canvas.width, canvas.height)
 	} //Clears the canvas when the function is called by the onclick function//
 </script>
 
