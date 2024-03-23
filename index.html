@@ -49,11 +49,9 @@ function draw_name() {
 	ctx.font = "50px Courier New";
 	ctx.fillText("Rotem", 10, 50);
 } //Writes my name on the canvas when the function is called by the onclick function//
-function my_image() {
-	var canvas = document.getElementById("myCanvas")
-	var context = canvas.getContext("2d")
-	var img = "starrynight.jpg"
-	context.drawImage(img, 10, 10);
+function drawImage() {
+	var img = document.getElementById("starrynight")
+	ctx.drawImage(img, 200, 200, 100, 100);
 	} //Places a picture of Starry Night on the canvas when called by the onclick function//
 </script>
 
@@ -90,9 +88,15 @@ function my_image() {
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	<canvas id="myCanvas" width="600" height="400" style="border:1px solid #33C7FF;"></canvas> <!--Adds a rectangular canvas with a light blue solid border-->
+	
 	<button class="w3-btn w3-black" onclick="draw_b()">Draw a rectangle</button> <!--Calls the function to draw a rectangle on the canvas when clicked-->
+	
 	<button class="w3-btn w3-black" onclick="draw_name()">Write my name</button> <!--Calls the function to write my name on the canvas when the button is clicked-->
-	<button class="w3-btn w3-black" onclick="my_image()">Add image</button> <!--Calls the function to add an image on the canvas when clicked-->
+	
+	<button class="w3-btn w3-black" onclick="drawImage()">Add image</button> <!--Calls the function to add an image on the canvas when clicked-->
+
+<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="10" height="10"> <!--Loads the image on the page-->
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
