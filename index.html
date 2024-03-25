@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 Making a canvas that has different elements drawn on it when a button is clicked
  
 Known Issues:
-blah, blah, blah, blah
+This was created by an undergraduate in the Freshman Research Initative at the University of Texas; it is only for entertainment. 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -42,24 +42,24 @@ function draw_b() {
 	var b_canvas = document.getElementById("myCanvas");
 	var b_context = b_canvas.getContext("2d");
 	b_context.fillRect(50, 25, 150, 100);
-} //Draws a 2D rectangle on the canvas when it is called by the onclick function//
+} //Draws a 2D rectangle on the canvas in the upper lefthand corner when it is called by the onclick function//
 function draw_name() {
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 	ctx.font = "50px Courier New";
 	ctx.fillText("Rotem", 10, 50);
-} //Writes my name on the canvas when the function is called by the onclick function//
+} //Writes my name on the top of the canvas when the function is called by the onclick function//
 function draw_image() {
 	var c = document.getElementById("myCanvas")
 	var ctx = c.getContext("2d");
 	var img = document.getElementById("starrynight");
 	ctx.drawImage(img, 200, 200, 100, 100);
-	} //Places a picture of Starry Night on the canvas when called by the onclick function//
+	} //Places a small picture of Starry Night on the middle of the canvas when called by the onclick function//
 function clear_canvas(){
 	var c = document.getElementById("myCanvas")
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, 600, 400);
-	} //Clears the canvas when the function is called by the onclick function//
+	} //Clears the entire canvas when the function is called by the onclick function//
 </script>
 
 
@@ -86,7 +86,7 @@ function clear_canvas(){
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6---HTML5-Canvas</h1> <!--Title of the page-->
 </div>
 	
 <div id="content" class="w3-container">
@@ -104,7 +104,7 @@ function clear_canvas(){
 
 	<button class="w3-btn w3-black" onclick="clear_canvas()">Clear canvas</button> <!--Calls the function to clear the canvas when the button is clicked-->
 	
-		<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="0" height="0"> <!--Loads the image on the page-->
+		<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="0" height="0"> <!--Loads the image on the page without having it appear separately from the canvas-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
