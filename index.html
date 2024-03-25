@@ -39,24 +39,24 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 function draw_b() {
-	var b_canvas = document.getElementById("myCanvas");
+	var b_canvas = document.getElementById("myCanvas"); //calls myCanvas from the HTML code//
 	var b_context = b_canvas.getContext("2d");
 	b_context.fillRect(50, 25, 150, 100);
 } //Draws a 2D rectangle on the canvas in the upper lefthand corner when it is called by the onclick function//
 function draw_name() {
-	var c = document.getElementById("myCanvas");
+	var c = document.getElementById("myCanvas"); //calls myCanvas from the HTML code//
 	var ctx = c.getContext("2d");
 	ctx.font = "50px Courier New";
 	ctx.fillText("Rotem", 200, 50);
 } //Writes my name in Courier New font, size 50px on the top of the canvas when the function is called by the onclick function//
 function draw_image() {
-	var c = document.getElementById("myCanvas")
+	var c = document.getElementById("myCanvas") //calls myCanvas from the HTML code//
 	var ctx = c.getContext("2d");
-	var img = document.getElementById("starrynight");
+	var img = document.getElementById("starrynight"); //calls the image from the HTML code//
 	ctx.drawImage(img, 200, 200, 100, 100);
 	} //Places a small picture of Starry Night in the middle of the canvas when called by the onclick function//
 function clear_canvas(){
-	var c = document.getElementById("myCanvas")
+	var c = document.getElementById("myCanvas") //calls myCanvas from the HTML code//
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, 600, 400);
 	} //Clears the entire canvas when the function is called by the onclick function//
@@ -94,17 +94,24 @@ function clear_canvas(){
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	<canvas id="myCanvas" width="600" height="400" style="border:1px solid #33C7FF;"></canvas> <!--Adds a rectangular canvas with a light blue solid border-->
+		
+		<canvas id="myCanvas" width="600" height="400" style="border:1px solid #33C7FF;"></canvas> 
+		<!--Adds a rectangular canvas with a light blue solid border-->
 	
-	<button class="w3-btn w3-black" onclick="draw_b()">Draw a rectangle</button> <!--Calls the function to draw a rectangle on the canvas when the corresponding button below the canvas is clicked-->
+		<button class="w3-btn w3-black" onclick="draw_b()">Draw a rectangle</button> 
+		<!--Calls the function to draw a rectangle on the canvas when the corresponding button below the canvas is clicked-->
 	
-	<button class="w3-btn w3-black" onclick="draw_name()">Write my name</button> <!--Calls the function to write my name on the canvas when the corresponding button below the canvas is clicked-->
+		<button class="w3-btn w3-black" onclick="draw_name()">Write my name</button> 
+		<!--Calls the function to write my name on the canvas when the corresponding button below the canvas is clicked-->
 	
-	<button class="w3-btn w3-black" onclick="draw_image()">Add image</button> <!--Calls the function to add an image on the canvas when the corresponding button below the canvas clicked-->
+		<button class="w3-btn w3-black" onclick="draw_image()">Add image</button> 
+		<!--Calls the function to add an image on the canvas when the corresponding button below the canvas clicked-->
 
-	<button class="w3-btn w3-black" onclick="clear_canvas()">Clear canvas</button> <!--Calls the function to clear the canvas when the corresponding button is clicked-->
+		<button class="w3-btn w3-black" onclick="clear_canvas()">Clear canvas</button> 
+		<!--Calls the function to clear the canvas when the corresponding button is clicked-->
 	
-		<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="0" height="0"> <!--Loads the image on the page without having it appear separately from the canvas-->
+				<img id="starrynight" src="starrynight.jpg" alt="starrynight" width="0" height="0"> 
+				<!--Loads the image on the page without having it appear separately from the canvas-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p> <!--Makes a footer appear-->
